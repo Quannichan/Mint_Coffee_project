@@ -1,0 +1,1036 @@
+ /* Author : Trần Minh Quân 22NS056,
+Thái Thị Hồng Phúc 22NS048 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.logo{
+    margin-left: -25px;
+}
+.COUNT{
+    font-size: 12px;
+    background-color: aliceblue;
+    border-radius: 20%;
+    color: black;
+    width: 50%;
+    padding: 2px;
+}
+.bag{
+    float:left;
+    margin-right: 3px;
+    padding-top: 1px;
+    margin-top: 10px;
+}
+.BAG{
+    margin-left: -45%;
+    margin-top: -30%;
+}
+.menu_bar{
+    background-color: black;
+    height: auto;
+    width:100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 6%;
+    position: fixed;
+    z-index: 1000;
+}
+.menu_bar ul{
+    list-style: none;
+    display: flex;
+}
+.menu_bar ul li{
+    align-items:center;
+    display: flex;
+    position: relative;
+}
+.menu_bar ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 1s;
+}
+.menu{
+    margin-top: 15px;
+    margin-left: -15px;
+    transition: 0.25s;
+}
+.cart{
+    margin-top: 5px;
+    margin-right: 30px;
+    margin-left: -10px;
+    transition: 0.25s;
+}
+.menu:hover{
+    width: 40px;
+    height: 40px;
+    margin-top:17px;
+    margin-right: -5px;
+    margin-left: -20px;   
+}
+.cart:hover{
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+}
+.menudown{
+    display: none;
+    z-index:100;
+}
+.menu_bar ul li:hover .menudown{
+    display: block;
+    position: absolute;
+    left: -970%;
+    top: 90%;
+    background-color: black;
+    z-index:100;
+}
+.menu_bar ul li:hover .menudown ul{
+    display: block;
+    margin: 14px;
+    margin-right: -2px;
+    z-index:100;
+}
+.menu_bar ul li:hover .menudown ul li{
+    width: 160px;
+    padding: 17px 0;
+
+}
+.menudown ul li a:hover{
+    color:aqua;
+}
+.drop_down_menu{
+    display: none;
+    z-index:100;
+}
+.menudown ul li:hover .drop_down_menu{
+    display: block;
+    position: absolute;
+    left: -165px;
+    bottom: -142px;
+    background-color: black;
+    text-decoration: none;
+    z-index:100;
+}
+.menudown ul li:hover .drop_down_menu ul{
+    display: block;
+    margin: 15px;
+    margin-right: -10px;
+    z-index:100;
+}
+.menudown ul li:hover .drop_down_menu ul li:hover{
+    width: 150px;
+    padding: 17px 0;
+    z-index:100;
+}
+.icon_left{
+    float: left;
+    margin-right: 10px;
+    padding-top: 3px;
+}
+.categories{
+    padding-top: 5%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+    line-height: 100%;
+    justify-items: center;
+    width: 100%;
+}
+.Search_text{
+    padding: 2%;
+}
+.Search_but{
+    padding: 5%;
+}
+.Choose{
+    padding-top: 5%;
+}
+.menu_choose{
+    border-width: 3px;
+    font-size: 17px;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color:none;
+    transition: all 0.75s;
+    outline: 0;
+}
+.menu_choose:focus{
+    width: 100px;
+    border-image: linear-gradient(to right, #f7df6c, #1c8ce1)1;
+}
+.find{
+    height: 30px;
+    width: 300px;
+    font-size: 18px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background:none;
+    transition: 0.25s;
+    outline: 0;
+    transition:all 0.75s;
+}
+.find:focus{
+    width:350px;
+    border-image: linear-gradient(to right, #f7df6c, #1c8ce1)1;
+}
+.reload{
+    width: 80px;
+    height: 25px;
+    transition: 0.25s;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+}
+.reload:hover{
+    color: black;
+    border-color: white;
+    background-color: white;
+    cursor: pointer;
+}
+.head_poduct{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Berkshire Swash', cursive;
+}
+.products{
+    display: flex;
+    justify-content: center;
+}
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 5%;
+    gap: 20px;
+}
+.box{
+    text-align: center;
+    padding: 2%;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 15px;
+    height: fit-content;
+    transition: 0.25s;
+}
+.box:hover{
+    box-shadow: 12px 12px 20px;
+}
+.box img{
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 15px;
+}
+.name_product{
+    font-size: 20px;
+    padding-top: 10%;
+    font-weight: bold;
+}
+.price{
+    font-size: 20px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.STA{
+    font-size: 16px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.ADD{
+    font-size: 17px;
+    width:110px;
+    height: 30px;
+    background-color: black;
+    color:white;
+    border-style: none;
+    transition: 0.25s;
+    border-radius: 5px;
+}
+.ADD:hover{
+    background-color: white;
+    color:black;
+}
+.ADD:disabled{
+    opacity: 0.25;
+}
+.ADD:disabled:hover{
+    opacity: 0.25;
+    background-color: black;
+    color:white;
+}
+.wrap_noft{
+    text-align:center;
+    justify-content:space-around;
+    padding:10%;
+    width:100%;
+}
+.noft{
+    text-align:center;
+    font-size:20px;
+}
+
+.footer{
+    justify-content: space-between;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+.info1{
+    color: white;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    padding-top: -50%;
+    padding-left: -50%;
+    padding-bottom: -50%;
+}
+.phone1{
+    text-decoration: none;
+    color: white;
+}
+.logo1{
+    text-align: center;
+    padding-bottom: 5%;
+}
+.link{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.info2{
+    text-align: left;
+    float: right;
+    padding-top: 5%;
+}
+ /* Author : Trần Minh Quân 22NS056,
+Thái Thị Hồng Phúc 22NS048 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Author : Trần Minh Quân 22NS056,
+Thái Thị Hồng Phúc 22NS048 */

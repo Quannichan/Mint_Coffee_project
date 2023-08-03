@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.header_cart{
+    text-align:center;
+    font-size:40px;
+    font-family: 'Berkshire Swash', cursive;
+}
+.products{
+    padding:5%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box_container{
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    padding: 5%;
+    width: 100%;
+}
+.Mess_box{
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    text-align: left;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: black;
+    background-color: white;
+    padding: 5%;
+}
+.wrap_noft{
+    text-align:center;
+    justify-content:space-around;
+    padding:10%;
+    width:100%;
+}
+.tt_mes{
+    font-size: 22px;
+    font-weight: bold;
+}
+.Name_cus{
+    font-size: 17px;
+}
+.phone_cus{
+    font-size: 17px;
+}
+.Mes_cus{
+    padding: 2%;
+    border-style: dotted;
+    font-size: 17px;
+}
+.noft{
+    text-align:center;
+    font-size:14px;
+}
+.But_gr{
+    position: fixed;
+    bottom: 15%;
+    right: 3%;
+    justify-content: center;
+}
+.home_but{
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: black;
+    border-color: white;
+    transition: 0.25s;
+    background-image: url('/Mint_Coffee/Images/Home_Ad.png');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.home_but:hover{
+    border-color: black;
+    box-shadow: 12px 12px 20px;
+    background-color: white;
+    background-image: url('/Mint_Coffee/Images/Home_admin_2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.text{
+    font-size: 16px;
+    position: fixed;
+    transition: 0.25s;
+    opacity: 0;
+    transform: translateY(-50px);
+    transform: translateX(-100px);
+}
+.home_but:hover~.text{
+    opacity: 1;
+}
